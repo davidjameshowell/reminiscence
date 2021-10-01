@@ -5,9 +5,9 @@ WORKDIR /usr/src/reminiscence
 RUN apk add --no-cache \
   gcc=9.3.0-r2 \
   libxslt-dev=1.1.34-r0 \
-  libxml2-dev=2.9.10-r5 \
-  musl-dev=1.1.24-r9 \
-  postgresql-dev=12.4-r0 \
+  libxml2-dev \
+  musl-dev \
+  postgresql-dev \
   wkhtmltopdf=0.12.5-r1
 
 COPY requirements.txt .
