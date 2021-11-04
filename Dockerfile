@@ -1,4 +1,4 @@
-FROM python:3.9-slim-buster
+FROM python:3.9.7-alpine3.14
 
 WORKDIR /usr/src/reminiscence
 
