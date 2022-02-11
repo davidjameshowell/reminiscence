@@ -8,7 +8,8 @@ RUN apk add --no-cache \
   libxml2-dev \
   musl-dev \
   postgresql-dev \
-  wkhtmltopdf
+  wkhtmltopdf \
+  chromium
 
 COPY requirements.txt .
 
@@ -20,5 +21,6 @@ RUN mkdir -p logs archive tmp
 
 RUN python manage.py applysettings --docker yes
 RUN python manage.py generatesecretkey
+RUN ln -s /usr/bin/chromium-brwoser /usr/bin/chromium
 
 ENTRYPOINT [ "/usr/src/reminiscence/entrypoint.sh" ]
